@@ -7,7 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
-import { MovieListComponent } from './movies/movie-list/movie-list.component';
+import { MovieListModule } from './movies/movie-list/movie-list.module';
 import { MovieModule } from './movies/movie/movie.module';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -19,15 +19,14 @@ import { WelcomeComponent } from './welcome/welcome.component';
         ReactiveFormsModule,
         RouterModule.forRoot([
             { path: '', component: WelcomeComponent},
-            { path: 'movies/:searchPhrase', component: MovieListComponent },
             { path: '**', component: PageNotFoundComponent }
         ]),
+        MovieListModule,
         MovieModule
     ],
     declarations: [
         AppComponent,
         TopBarComponent,
-        MovieListComponent,
         PageNotFoundComponent,
         SearchBarComponent,
         WelcomeComponent

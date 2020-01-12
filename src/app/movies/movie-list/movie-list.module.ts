@@ -8,9 +8,11 @@ import { MovieListComponent } from './movie-list.component';
   declarations: [MovieListComponent],
   imports: [
     RouterModule.forChild([
-        { path: 'movies', component: MovieListComponent }
+        { path: 'movies/:searchPhrase', component: MovieListComponent }
     ]),
     CommonModule
   ]
 })
-export class MovieListModule { }
+export class MovieListModule {
+    constructor() { }
+}
