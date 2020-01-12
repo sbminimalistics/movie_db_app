@@ -1,0 +1,15 @@
+<div class="container-fluid bg-dark pt-3 pb-1">
+    <div class="row">
+        <h3 class="col-md-12 text-light pl-5">Search results for "{{ searchPhrase }}":</h3>
+    </div>
+</div>
+<div class="row justify-content-center" app-movie-list>
+    <div *ngFor="let product of data" class="col-8 card mt-1">
+        <h3>
+            {{ product.Title }}
+        </h3>
+        <a [routerLink]="['/movie', product.imdbID]">
+            more details
+        </a>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div class='' *ngIf='movie' app-movie-list>
+    <div class='row container-fluid'>
+        <div class='col-sm-12'>
+            <h2>Title: {{movie.Title}}</h2>
+        </div>
+    </div>
+    <div class='row container-fluid'>
+        <div class='col-sm-12'>Year: {{movie.Year}}</div>
+    </div>
+    <div class='row container-fluid'>
+        <div class='col-sm-12'>Length: {{movie.Runtime}}</div>
+    </div>
+    <div class='row container-fluid'>
+        <div class='col-sm-12'>Imdb Rating: {{movie.imdbRating}}</div>
+    </div>
+    <div class='row container-fluid'>
+        <div class='col-sm-12'>Production: {{movie.Production}}</div>
+    </div>
+    <div class='row container-fluid'>
+        <div class='col-sm-12'><img src="{{movie.Poster}}" alt="{{movie.Title}}"></div>
+    </div>
+</div>
