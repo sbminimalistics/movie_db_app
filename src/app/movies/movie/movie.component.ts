@@ -26,7 +26,6 @@ export class MovieComponent implements OnInit {
 
     getMovie(id: string) {
         this.apiService.getMovie(id).subscribe((data)=>{
-            console.log(`service return movie id: ${id} data: ${JSON.stringify(data)}`);
             this.movie = data;
         });
     }

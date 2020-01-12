@@ -20,7 +20,6 @@ export class MovieListComponent implements OnInit {
         this.apiService.search(this.searchPhrase)
         // Subscribe to begin listening for async result
         .subscribe((data)=>{
-                console.log();
                 this.data = data['Search'];
             }
         );

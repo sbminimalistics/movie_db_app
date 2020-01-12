@@ -12,7 +12,6 @@ export class SearchService {
     }
 
     public search(phrase?: string){
-        console.log(`search init with phrase: ${phrase}`);
         return this.searchPhrase = phrase;
     }
 }

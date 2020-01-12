@@ -11,7 +11,6 @@ export class AppComponent  {
     }
 
     initSearch(phrase: string) {
-        console.log(`search phrase: ${phrase} inside AppComponent`);
         this.router.navigate(['/movies/', phrase]);
     }
 }

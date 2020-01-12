@@ -11,19 +11,7 @@ export class SearchBarComponent implements OnInit {
     @Output()
     initSearch = new EventEmitter();
 
-    //_searchPhrase = '';
-    /*
-    get searchPhrase(): string {
-      return this._searchPhrase;
-    }
-    set searchPhrase(value: string) {
-      this._searchPhrase = value;
-      console.log(`searchPhrase: ${value}`);
-      //this.filteredProducts = this.listFilter ? this.performFilter(this.searchPhrase) : this.products;
-    }
-    */
     public search(phrase){
-        console.log(`search phrase: ${phrase} inside SearchBarComponent`);
         this.initSearch.emit(phrase);
     }
 
