@@ -1,11 +1,14 @@
 <div class='' *ngIf='movie' app-movie-list>
     <div class='row container-fluid'>
         <div class='col-sm-12'>
-            <h2>Title: {{movie.Title}}</h2>
+            <h2>{{movie.Title}}</h2> <h3>{{movie.Year}}</h3><h4>{{movie.Type}}</h4>
         </div>
     </div>
     <div class='row container-fluid'>
-        <div class='col-sm-12'>Year: {{movie.Year}}</div>
+        <div class='col-sm-12'><img src="{{movie.Poster}}" alt="{{movie.Title}}"></div>
+    </div>
+    <div class='row container-fluid'>
+        <div class='col-sm-12'>Plot: {{movie.Plot}}</div>
     </div>
     <div class='row container-fluid'>
         <div class='col-sm-12'>Length: {{movie.Runtime}}</div>
@@ -15,8 +18,5 @@
     </div>
     <div class='row container-fluid'>
         <div class='col-sm-12'>Production: {{movie.Production}}</div>
-    </div>
-    <div class='row container-fluid'>
-        <div class='col-sm-12'><img src="{{movie.Poster}}" alt="{{movie.Title}}"></div>
     </div>
 </div>
