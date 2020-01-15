@@ -1,9 +1,10 @@
-<div class="row container-fluid">
-    <div class="">
-        <h3>search movie database:</h3>
-    </div>
-    <div id="input-holder" class="col-md-4 mt-1 ml-md-2 float-left">
-        <!--<input type="text" (keyup.enter)="search($event.target.value)"/>-->
-        <input #inp0 type="text" (keyup.enter)="search(inp0.value)"/>
-    </div>
+<div class="d-inline-flex ml-3 mt-1 text-left">
+    <h3 class="mb-0">search movie database:</h3>
+</div>
+<div id="input-holder" class="col-md-6 mt-1 mt-md-2">
+    <!--<input type="text" (keyup.enter)="search($event.target.value)"/>-->
+    <input #inp0 type="text" (keyup.enter)="search(inp0.value)"/>
+</div>
+<div id="searches-count" class="col-12 text-grey text-left text-tiny mb-2 mt-1">
+    Searches during this session: {{ count$ | async }}
 </div>

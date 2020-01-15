@@ -12,11 +12,7 @@ app-top-bar {
 }
 
 app-search-bar {
-    width: 100%;
     background-color: lighten( $theme-color, 30% );
-    padding: 16px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    margin: 0px;
+    padding: 0px;
 }

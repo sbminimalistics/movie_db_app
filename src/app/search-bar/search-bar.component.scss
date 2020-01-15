@@ -5,6 +5,10 @@ h3 {
     color: #fff;
 }
 
-#input-holder {
-    padding-left: 0px;
+#input-holder > input {
+    width: 100%;
+}
+
+#searches-count {
+    font-size: 80%;
 }

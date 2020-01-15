@@ -12,6 +12,11 @@ import { MovieModule } from './movies/movie/movie.module';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 
+import { EffectsModule } from '@ngrx/effects';
+import { SearchEffects } from './store/effects/search.effects';
+import { StoreModule } from '@ngrx/store';
+import { searchReducer } from './store/reducers/search.reducer';
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -22,7 +27,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
             { path: '**', component: PageNotFoundComponent }
         ]),
         MovieListModule,
-        MovieModule
+        MovieModule,
+        StoreModule.forRoot({search: searchReducer}),
+        EffectsModule.forRoot([SearchEffects])
     ],
     declarations: [
         AppComponent,
