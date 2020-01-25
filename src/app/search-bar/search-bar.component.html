@@ -3,7 +3,8 @@
 </div>
 <div id="input-holder" class="col-md-6 mt-1 mt-md-2">
     <!--<input type="text" (keyup.enter)="search($event.target.value)"/>-->
-    <input #inp0 type="text" (keyup.enter)="search(inp0.value)"/>
+    <input #inp0 type="text" (keyup.enter)="search(inp0.value)" class="col-9"/>
+    <input type="button" value="search" (click)="search(inp0.value)" class="col-3"/>
 </div>
 <div id="searches-count" class="col-12 text-grey text-left text-tiny mb-2 mt-1">
     Searches during this session: {{ count$ | async }}
